@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <style>
+      body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+button {
+    height: 50px;
+    margin: 2px;
+    font-size: 1.2em;
+    border-style: none;
+    /background-color: #d6e0f5;/
+}
+
+
+button:hover {
+    color: aliceblue;
+    background-color: #2952a3;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.calculator {
+    position: relative;
+    top: 150px;
+    margin: 0 auto;
+    max-width: 300px;
+
+}
+
+.calcButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin:0 auto;
+    background-color: #193366;
+    padding: 10px;
+}
+
+.calcButtons > button:nth-child(17) {
+
+    grid-column: 1/3;
+}
+
+.operator {
+    background-color: #d6e0f5;
+}
+
+.userInput {
+    position: relative;
+    height: 80px;
+    max-width: 100%;
+    text-align: right;
+    padding: 10px;
+    font-size: 25px;
+    /border: 1px solid #193366;/
+    background-color: #d6e0f5;
+}
+
+
+
+.calcButtons > button:nth-child(19) {
+
+    background-color: pink;
+}
+
+.userEntry {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    margin: 5px;
+    right:0;
+}
+
+.finalCalc{
+
+    position: absolute;
+    right:0;
+    margin:5px;
+    top:0;
+    padding:0;
+}
+    </style>
+</head>
+<body>
+
+
+<div class="calculator">
+
+    <div class="userInput"><p class="userEntry"></p><p class="finalCalc"></p></div>
+
+    <div class="calcButtons">
+
+
+        <button>+/-</button>
+        <button>AC</button>
+        <button>DEL</button>
+        <button class="operator">*</button>
+
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator">+</button>
+
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">/</button>
+
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">-</button>
+
+
+        <button class="number">0</button>
+        <button class="decimal">.</button>
+        <button class="operator">=</button>
+
+
+    </div>
+</div>
+
+<script src="calc.js"></script>
+
+</body>
+</html>
